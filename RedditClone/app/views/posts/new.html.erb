@@ -11,16 +11,25 @@
   <label>Content
     <input type="text" name="post[content]" value="">
   </label>
+  <br>
+  <br>
+  <br>
 
-
-  <select name="post[sub_id]">
+  <!-- <select name="post[sub_id]">
     <% @subs.each do |sub| %>
      <option value="<%= sub.id %>"><%= sub.title %></option>
      <% end %>
-  </select>
+  </select> -->
 
+  
+  <% @subs.each do |sub| %>
+  <label> <%= sub.title %>
+    <input type="checkbox" name="post[sub_ids][]" value="<%= sub.id %>"> <br>
+    </label>
+  <% end %>
+  <br>
   <input type="submit" name="" value="Create Post">
-
+</label>
 
 
 </form>
