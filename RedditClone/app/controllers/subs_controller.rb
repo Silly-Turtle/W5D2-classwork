@@ -1,6 +1,6 @@
 class SubsController < ApplicationController
 
-  before_action :not_moderator, only: [:edit]
+  before_action :not_moderator, only: [:edit, :update]
 
   def new
     @sub = Sub.new

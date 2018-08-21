@@ -19,5 +19,6 @@ class Sub < ApplicationRecord
     primary_key: :id,
     class_name: :User
 
+  has_many :posts
 
 end
