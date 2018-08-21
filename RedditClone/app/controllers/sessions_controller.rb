@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     @user = User.find_by_credentials(params[:user][:username], params[:user][:password])
     if @user
       login!(@user)
-      # redirect_to TODO
+      redirect_to subs_url
     else
       flash.now[:errors] = ['you dont know your password']
       render :new
